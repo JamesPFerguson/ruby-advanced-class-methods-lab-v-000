@@ -45,7 +45,7 @@ class Song
     song = Song.new
     arr = name.split("-")
     song.artist_name = arr[0]
-    song.name = arr[1].gsub(/.mp3/ "")
+    song.name = arr[1].gsub(/.mp3/, "")
 
     song
   end
