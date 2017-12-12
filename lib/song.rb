@@ -43,9 +43,10 @@ class Song
 
   def self.new_from_filename(name)
     song = Song.new
-    arr = name.delete(/.mp3/).strip.split("-")
-    song.name = arr[1]
+    arr = name.split("-")
     song.artist_name = arr[0]
+    song.name = arr[1].gsub(/.mp3/ "")
+
     song
   end
 
