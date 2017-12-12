@@ -54,7 +54,8 @@ class Song
     arr = filename.split(" - ")
     song.artist_name = arr[0]
     song.name = arr[1].gsub(/.mp3/, "")
+    song.save
     song
   end
-  
+
 end
